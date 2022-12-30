@@ -1,0 +1,17 @@
+.portfolio {
+    margin: 100px 0;
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__box {
+        margin: 0 20px 0 0;
+
+        &:last-child {
+            margin: 0;
+        }
+    }
+}

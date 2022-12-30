@@ -1,0 +1,83 @@
+@import '__vars';
+
+.benefits {
+    margin: 100px 0 0;
+
+    &__descr {
+        max-width: 610px;
+        @extend %roboto-medium-font;
+        @include title;
+        text-align: center;
+        margin: 0 auto;
+        padding: 5px 0 0;
+    }
+
+    &__wrapper {
+        background: #A1C7D4;
+        border-radius: 12px;
+        padding: 16px 20px;
+        display: flex;
+        justify-content: space-between;
+        margin: 50px 0 0;
+    }
+
+    &__boxs {
+        margin: 0 40px 0 0;
+
+        &:last-child {
+            margin: 0;
+        }
+    }
+
+    &__box {
+        max-width: 300px;
+        height: 176px;
+        background: #FFFFFF;
+        border-radius: 8px;
+        padding: 10px 20px;
+        margin: 0 0 12px;
+
+        &:last-child {
+            margin: 0;
+        }
+    }
+
+    &__box-top {
+        display: flex;
+        align-items: center;
+    }
+
+    &__box-number {
+        @extend %roboto-regular-font;
+        font-size: 40px;
+        color: #46B1DE;
+    }
+
+    &__box-title {
+        @extend %roboto-bold-font;
+        font-size: 18px;
+        color: #46B1DE;
+        text-transform: uppercase;
+        padding: 0 0 0 10px;
+    }
+
+    &__box-descr {
+        @extend %roboto-regular-font;
+        @include title;
+        padding: 25px 0 0;
+    }
+
+}
+
+.headline {
+    @extend %roboto-regular-font;
+    font-size: 34px;
+    color: #1B1D1F;
+    text-align: center;
+    text-transform: uppercase;
+
+    span {
+        font-weight: 600;
+        color: #46B1DE;
+    }
+}

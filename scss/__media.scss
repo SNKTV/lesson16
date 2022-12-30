@@ -1,0 +1,382 @@
+@media (max-width: 992px) {
+
+    .header {
+
+        &__menu {
+            display: none;
+        }
+
+        &__language-list {
+            display: none;
+        }
+
+        &__card {
+            flex-direction: column;
+        }
+
+        &__card-descr {
+            max-width: unset;
+            text-align: center;
+        }
+    }
+
+    .mob {
+
+        &__menu {
+            display: block;
+        }
+    }
+
+
+    .benefits {
+
+        &__wrapper {
+            flex-direction: column;
+            align-items: center;
+            background: unset;
+            padding: 0;
+        }
+
+        &__boxs {
+            background-color: #A1C7D4;
+            border-radius: 12px 12px 0 0;
+            padding: 15px 15px 0px;
+            margin: 0;
+
+            &:nth-of-type(2) {
+                border-radius: unset;
+            }
+
+            &:last-child {
+                padding: 15px;
+                border-radius: 0 0 12px 12px;
+            }
+        }
+
+        &__box {
+            height: unset;
+        }
+
+    }
+
+    .services {
+
+        &__wrapper {
+            flex-direction: column;
+        }
+
+        &__left {
+            position: unset;
+            max-width: 385px;
+            width: unset;
+            margin: 0 auto;
+        }
+
+        &__list {
+            background-color: #A1C7D4;
+            border-radius: 12px 12px 0 0;
+            padding: 20px;
+
+            &__item {
+                position: unset !important;
+                animation-name: none !important;
+                background-color: #fff;
+                max-width: unset;
+                padding: 10px 0;
+                margin: 0 0 30px;
+                text-align: center;
+
+            }
+        }
+
+        &__center {
+            display: none;
+        }
+
+        &__right {
+            width: unset;
+            max-width: 385px;
+            margin: 0 auto;
+
+        }
+
+        .services__right .services__list {
+            border-radius: 0 0 12px 12px;
+            padding: 0 20px 20px;
+        }
+    }
+
+    // .services {
+
+    //     &__wrapper {
+    //         flex-direction: column;
+    //     }
+
+    //     &__left {
+    //         width: unset;
+    //         max-width: 385px;
+    //         margin: 0 auto;
+
+    //         &__list {
+    //             border-radius: 12px 12px 0 0;
+    //             padding: 20px;
+    //         }
+    //     }
+
+    //     &__right {
+    //         width: unset;
+    //         max-width: 385px;
+    //         margin: 0 auto;
+
+    //     }
+
+    //     &__center {
+    //         display: none;
+    //     }
+
+    //     &__list {
+    //         background-color: #A1C7D4;
+
+    //     }
+    // }
+
+    // .services__left {
+
+    //     .services__list {
+    //         border-radius: 12px 12px 0 0;
+    //         padding: 20px;
+    //     }
+    // }
+
+    // .services__right {
+
+    //     .services__list {
+    //         border-radius: 0 0 12px 12px;
+    //         padding: 0 20px 20px;
+    //     }
+    // }
+
+    // .services__item {
+    //     background-color: #fff;
+    //     padding: 10px 0;
+    //     margin: 0 0 30px;
+    //     text-align: center;
+
+    //     &:last-child {
+    //         margin: 0;
+    //     }
+    // }
+
+    // .services__left .services__list .services__item:nth-of-type(1),
+    // .services__left .services__list .services__item:nth-of-type(2),
+    // .services__left .services__list .services__item:nth-of-type(3),
+    // .services__right .services__list .services__item:nth-of-type(1),
+    // .services__right .services__list .services__item:nth-of-type(2),
+    // .services__right .services__list .services__item:nth-of-type(3) {
+    //     position: unset;
+    // }
+
+    // .services__item-title {
+    //     padding: 0 0 10px;
+    // }
+
+
+    .feedback {
+
+        &__form {
+            flex-direction: column;
+        }
+
+        &__form-box {
+            margin: 0 0 30px;
+        }
+
+        &__right {
+            padding: 0;
+        }
+
+        &__copyright {
+            padding: 20px 0 0;
+            text-align: center;
+        }
+    }
+}
+
+@media (max-width: 650px) {
+
+    .header {
+        height: 100vh;
+
+        &__wrapper {
+            height: 100vh;
+        }
+
+        &__logo {
+
+            a {
+                font-size: 30px;
+            }
+        }
+
+        &__bottom {
+            bottom: 8px;
+
+            &::after {
+                display: none;
+            }
+        }
+
+        &__images-mob {
+            display: block;
+        }
+
+        &__card {
+            display: none;
+        }
+    }
+
+    .services {
+
+        &__warning {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &__warning-descr {
+            padding: 0;
+        }
+    }
+
+    .footer {
+
+        &__wrapper {
+            flex-direction: column;
+        }
+
+        &__right {
+            margin: 30px 0 0;
+            padding: 0;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+
+    .header {
+        height: 800px;
+
+        &__wrapper {
+            height: 550px;
+        }
+
+        &__box {
+            text-align: center;
+        }
+
+        &__logo {
+            margin: 0 20px 0 0;
+
+            a {
+                font-size: 16px;
+
+                span {
+                    font-size: 11px;
+                }
+            }
+        }
+
+        &__logo-icon {
+            width: 25px;
+            height: 33px;
+        }
+
+        &__tel {
+            font-size: 12px;
+        }
+
+        &__title {
+            font-size: 22px;
+        }
+
+        &__descr {
+            font-size: 12px;
+        }
+
+        &__bottom {
+            bottom: -245px;
+        }
+    }
+
+    .btn {
+        width: 100px;
+        height: 35px;
+        font-size: 14px;
+    }
+
+    .headline {
+        font-size: 24px;
+    }
+
+    .benefits {
+
+        &__box-number {
+            font-size: 30px;
+        }
+
+        &__box-title {
+            font-size: 12px;
+        }
+
+        &__box-descr {
+            padding: 20px 0 0;
+            font-size: 14px;
+        }
+
+        &__item-title {
+            font-size: 12px;
+        }
+
+        &__item-descr {
+            font-size: 14px;
+        }
+
+        &__descr {
+            font-size: 14px;
+        }
+
+        &__wrapper {
+            flex-direction: column;
+        }
+
+        &__box {
+            margin: 0 0 30px;
+        }
+
+    }
+
+    .footer {
+
+        &__logo {
+
+            a {
+                font-size: 27px;
+
+                span {
+                    font-size: 19px;
+                }
+            }
+        }
+
+        &__left {
+            width: unset;
+        }
+
+        &__bottom {
+            justify-content: unset;
+        }
+
+        &__item {
+            margin: 0 30px 0 0;
+        }
+    }
+}

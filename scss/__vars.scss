@@ -1,0 +1,37 @@
+// 400
+%ss-regular-font {
+    font-family: 'Sofia Sans', sans-serif;
+    font-weight: 400;
+}
+
+%roboto-regular-font {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+// 500
+%roboto-medium-font {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+}
+
+// 700
+%roboto-bold-font {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+}
+
+$mainColor: #46b1de;
+
+@mixin title {
+    font-size: 16px;
+    color: #1B1D1F;
+}
+
+@mixin triangle($width, $height, $mainColor) {
+    width: 0px / $width;
+    height: 0px /$height;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-top: 100px solid $mainColor;
+}

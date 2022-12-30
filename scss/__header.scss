@@ -1,0 +1,346 @@
+@import '__vars';
+
+.header {
+    background-image: url(../../images/background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 800px;
+
+    &__wrapper {
+        position: relative;
+        height: 800px;
+    }
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 60px 0 0;
+    }
+
+    &__logo {
+        display: flex;
+        align-items: center;
+
+        a {
+            @extend %ss-regular-font;
+            font-size: 38px;
+            color: #46B1DE;
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            padding: 0 0 0 8px;
+
+            span {
+                font-size: 26px;
+            }
+        }
+    }
+
+    &__menu-list {
+        display: flex;
+        align-items: center;
+    }
+
+    &__menu-item {
+        padding: 0 80px 0 0;
+
+        &:last-child {
+            padding: 0;
+        }
+    }
+
+    &__menu-link {
+        @extend %roboto-regular-font;
+        font-size: 16px;
+        color: #1B1D1F;
+        transition: .4s ease-in-out;
+    }
+
+    &__menu-link:hover {
+        color: #46B1DE;
+        transition: .4s ease-in-out;
+    }
+
+    &__tel {
+        @extend %roboto-regular-font;
+        font-size: 16px;
+        color: #1B1D1F;
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            background-image: url(../../images/phone.svg);
+            width: 24px;
+            height: 24px;
+            top: 0;
+            left: -30px;
+        }
+
+        &:hover {
+            color: #46B1DE;
+            transition: .3s ease-in-out;
+        }
+    }
+
+    &__language-list {
+        display: flex;
+        align-items: center;
+
+    }
+
+    &__language-item {
+        padding: 0 10px 0 0;
+        position: relative;
+
+        &:nth-of-type(1) {
+
+            &::after {
+                content: '';
+                position: absolute;
+                width: 22px;
+                height: 0px;
+                border: 1px solid #1B1D1F;
+                transform: rotate(90deg);
+                top: 10px;
+                right: -8px;
+
+            }
+        }
+
+        &:last-child {
+            padding: 0;
+        }
+
+    }
+
+    &__language-link {
+        @extend %roboto-regular-font;
+        text-transform: uppercase;
+        font-size: 20px;
+    }
+
+    &__content {
+        margin: 35px 0 0;
+        animation-name: animation-content;
+        animation-timing-function: linear;
+        animation-duration: 2s;
+        position: relative;
+    }
+
+    &__box {
+        max-width: 500px;
+    }
+
+    &__title {
+        @extend %roboto-bold-font;
+        font-size: 40px;
+        color: #1B1D1F;
+        text-transform: uppercase;
+
+        span {
+            color: #46B1DE;
+        }
+    }
+
+    &__descr {
+        max-width: 460px;
+        @extend %roboto-regular-font;
+        @include title;
+        padding: 30px 0 0;
+    }
+
+    &__btn {
+        display: flex;
+        justify-content: space-between;
+        padding: 50px 0 0;
+    }
+
+    &__bottom {
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+        bottom: -50px;
+        left: 0;
+        right: 0;
+
+        &:after {
+            content: '';
+            position: absolute;
+            background-image: url(../../images/lady.png);
+            width: 572px;
+            height: 463px;
+            bottom: 50px;
+            right: 0;
+        }
+    }
+
+    &__card {
+        width: 280px;
+        background: #FFFFFF;
+        border: 1px solid #D8E1E1;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        padding: 20px;
+        margin: 0 10px 0 0;
+        z-index: 1;
+        animation-name: animation-card;
+        animation-timing-function: linear;
+        animation-duration: 1s;
+        position: relative;
+
+        &:last-child {
+            margin: 0;
+        }
+    }
+
+    &__card-number {
+        @extend %roboto-regular-font;
+        font-size: 65px;
+        color: #46B1DE;
+    }
+
+    &__card-descr {
+        max-width: 146px;
+        @extend %roboto-regular-font;
+        @include title;
+        padding: 0 0 0 7px;
+    }
+
+    &__images-mob {
+        display: none;
+    }
+
+}
+
+.active {
+    font-weight: 700;
+}
+
+.burger {
+    width: 35px;
+    height: 30px;
+    margin: 10px 10px;
+    position: relative;
+    cursor: pointer;
+    display: none;
+
+    span {
+        background-color: #000;
+        position: absolute;
+        border-radius: 2px;
+        width: 100%;
+        height: 4px;
+        transition-duration: 500ms;
+
+        &:nth-child(1) {
+            top: 0px;
+            left: 0px;
+        }
+
+        &:nth-child(2) {
+            top: 13px;
+            left: 0px;
+            opacity: 1;
+        }
+
+        &:nth-child(3) {
+            bottom: 0px;
+            left: 0px;
+        }
+    }
+}
+
+.burger.open span:nth-child(1) {
+    transform: rotate(45deg);
+    top: 13px;
+}
+
+.burger.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.burger.open span:nth-child(3) {
+    transform: rotate(-45deg);
+    top: 13px;
+}
+
+.btn {
+    width: 180px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @extend %roboto-bold-font;
+    font-size: 19px;
+    text-transform: uppercase;
+    border-radius: 8px;
+
+    &__call {
+        background: linear-gradient(97.59deg, #46B1DE 9.8%, #0591CC 95.1%);
+        box-shadow: 0px 2px 10px #46B1DE;
+        color: #fff;
+    }
+
+    &__services {
+        background: #FFFFFF;
+        mix-blend-mode: normal;
+        border: 1px solid #DDE0DC;
+        box-shadow: 0px 2px 10px #DDE0DC;
+        color: #46B1DE;
+    }
+
+    &__form {
+        background: #46B1DE;
+    }
+}
+
+
+@keyframes animation-card {
+
+    0% {
+        opacity: 0;
+        left: -100px;
+    }
+
+    25% {
+        opacity: 0;
+        left: -75px;
+    }
+
+    50% {
+        opacity: 1;
+        left: -50px;
+    }
+
+    75% {
+        left: -25px;
+    }
+
+    100% {
+        left: 0px;
+    }
+}
+
+@keyframes animation-content {
+
+    0% {
+        opacity: 0;
+        bottom: -100px;
+    }
+
+    25% {
+        bottom: -75px;
+    }
+
+    50% {
+        opacity: 1;
+        bottom: -25px;
+    }
+
+    100% {
+        bottom: 0px;
+    }
+}
